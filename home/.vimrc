@@ -126,9 +126,9 @@ nnoremap <Space> <C-w>
 set nocompatible
 filetype off
 if has ('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#rc(expand('~/.vim/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 

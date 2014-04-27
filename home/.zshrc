@@ -1,19 +1,42 @@
 ##
 # ~/.zshrc
 #
- 
+
+## Environment variable configuration
+#
+# Env
+#
+source /etc/profile
+
+#
+# LANG
+#
+export LANG=ja_JP.UTF-8
+
 # prompt
-#autoload -U colors
-#colors
-PROMPT='[%n@%m]# '
-RPROMPT='[%d]'
- 
+autoload -U colors
+colors
+case ${UID} in
+  0)
+    PROMPT="%{${fg[red]}%}[%n@%m]%{${reset_color}%}# "
+    RPROMPT='[%d]'
+    [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
+      PROMPT="%{${fg[cyan]}%}$(echo ${HOST%%.*} | tr '[a-z]' '[A-Z]') ${PROMPT}"
+    ;;
+  *)
+    PROMPT="%{${fg[magenta]}%}[%n@%m]%{${reset_color}%}%% "
+    RPROMPT='[%d]'
+    [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
+      PROMPT="%{${fg[cyan]}%}$(echo ${HOST%%.*} | tr '[a-z]' '[A-Z]') ${PROMPT}"
+    ;;
+esac
+
 # completion
 ##autoload -U compinit
 ##compinit
 ##setopt correct
 ##zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
- 
+
 # history
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -22,7 +45,7 @@ SAVEHIST=10000
 ##setopt share_history
 ##setopt auto_pushd
 ##setopt pushd_ignore_dups
- 
+
 # alias
 #alias ls='ls --color=auto'
 alias ll='ls -lF'

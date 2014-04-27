@@ -21,13 +21,13 @@ case ${UID} in
     PROMPT="%{${fg[red]}%}[%n@%m]%{${reset_color}%}# "
     RPROMPT='[%d]'
     [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-      RPROMPT="%{${fg[cyan]}%}$(echo ${HOST%%.*} | tr '[a-z]' '[A-Z]')@${RPROMPT}"
+      RPROMPT="%{${fg[cyan]}%}$(echo ${HOST%%.*} | tr '[a-z]' '[A-Z]')@${RPROMPT}%{${reset_color}%}"
     ;;
   *)
     PROMPT="%{${fg[magenta]}%}[%n@%m]%{${reset_color}%}%% "
     RPROMPT='[%d]'
     [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-      RPROMPT="%{${fg[cyan]}%}$(echo ${HOST%%.*} | tr '[a-z]' '[A-Z]')@${RPROMPT}"
+      RPROMPT="%{${fg[cyan]}%}$(echo ${HOST%%.*} | tr '[a-z]' '[A-Z]')@${RPROMPT}%{${reset_color}%}"
     ;;
 esac
 

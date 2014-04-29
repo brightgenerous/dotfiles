@@ -1,0 +1,10 @@
+[user]
+  name = brightgenerous
+  email = katou.akihiro@gmail.com
+[core]
+  editor = vim -c \"set fenc=utf-8\"
+  pager = lv -c
+[color]
+  ui = true
+[alias]
+

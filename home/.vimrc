@@ -136,6 +136,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 
+" Scalaのハイライト
+NeoBundle 'derekwyatt/vim-scala'
+
 filetype plugin on
 filetype indent on
 

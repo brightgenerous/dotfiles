@@ -27,6 +27,7 @@ set fileencoding=utf-8
 " ____________________________________________________________
 set splitright
 set laststatus=2
+set statusline=%<%f\%m%r%h%w%y%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%4v\ %l/%L
 set backspace=start,eol,indent,
 " ------------------------------------------------------------
 

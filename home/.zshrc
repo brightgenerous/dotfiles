@@ -72,9 +72,3 @@ eval "$(rbenv init - --no-rehash)"
 PATH=~/git/svm:$PATH
 export SCALA_HOME=~/.svm/current/rt
 export PATH=$SCALA_HOME/bin:$PATH
-
-export PLAY_HOME=~/.play/current
-export PATH=$PLAY_HOME:$PATH
-
-export ACTIVATOR_HOME=~/.activator/current
-export PATH=$ACTIVATOR_HOME:$PATH

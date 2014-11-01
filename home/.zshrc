@@ -75,3 +75,6 @@ export PATH=$SCALA_HOME/bin:$PATH
 
 export PLAY_HOME=~/.play/current
 export PATH=$PLAY_HOME:$PATH
+
+export ACTIVATOR_HOME=~/.activator/current
+export PATH=$ACTIVATOR_HOME:$PATH

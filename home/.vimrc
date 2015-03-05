@@ -124,12 +124,21 @@ nnoremap <Space> <C-w>
 
 " ____________________________________________________________
 " -- NeoBundle --
+if has('win32') || has('win64')
+  set shellslash
+  let $VIMDIR = expand('~/vimfiles')
+else
+  let $VIMDIR = expand('~/.vim')
+endif
+
 set nocompatible
 filetype off
 if has ('vim_starting')
-  set runtimepath+=~/.vim/neobundle.vim/
+  set runtimepath+=$VIMDIR/bundle/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.vim/neobundle/'))
+call neobundle#begin(expand('$VIMDIR/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+call neobundle#end()
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 

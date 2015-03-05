@@ -69,6 +69,6 @@ alias -g X='| xargs'
 PATH=$HOME/.rbenv/shims:$PATH
 eval "$(rbenv init - --no-rehash)"
 
-PATH=~/git/svm:$PATH
+PATH=$HOME/.svm/svm:$PATH
 export SCALA_HOME=~/.svm/current/rt
 export PATH=$SCALA_HOME/bin:$PATH

@@ -73,4 +73,3 @@ PATH=$HOME/.svm/svm:$PATH
 export SCALA_HOME=~/.svm/current/rt
 export PATH=$SCALA_HOME/bin:$PATH
 
-eval "$(boot2docker shellinit)"

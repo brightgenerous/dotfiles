@@ -137,17 +137,16 @@ if has ('vim_starting')
   set runtimepath+=$VIMDIR/bundle/neobundle.vim/
 endif
 call neobundle#begin(expand('$VIMDIR/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
-call neobundle#end()
 
 NeoBundleFetch 'Shougo/neobundle.vim'
-
 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 
 " Scalaのハイライト
 NeoBundle 'derekwyatt/vim-scala'
+
+call neobundle#end()
 
 filetype plugin on
 filetype indent on
